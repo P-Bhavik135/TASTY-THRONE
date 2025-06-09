@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TASTY THRONE - Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    }
+
+    .login-container {
+      background-color: rgba(255, 77, 77, 0.9);
+      padding: 40px 50px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      color: white;
+      text-align: center;
+    }
+
+    .login-container h1 {
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0 20px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .btn-login {
+      background-color: #fff;
+      color: #ff4d4d;
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-login:hover {
+      background-color: #e60000;
+      color: white;
+    }
+
+    .error-msg {
+      color: #ffdddd;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Login to TASTY THRONE</h1>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <div class="error-msg" id="error"></div>
+      <button type="submit" class="btn-login">Login</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const errorDiv = document.getElementById('error');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (!email || !password) {
+        errorDiv.textContent = 'Please fill in both email and password.';
+        return;
+      }
+
+      
+      localStorage.setItem('loggedInUser', JSON.stringify({ email }));
+
+      
+      window.location.href = 'booking.html';
+
+    });
+  </script>
+</body>
+</html>

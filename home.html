@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TASTY THRONE - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px 50px;
+      background-color: #ff4d4d;
+      color: #fff;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd6d6;
+    }
+
+    .btn-logout {
+      background-color: #fff;
+      color: #ff4d4d;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 15px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-logout:hover {
+      background-color: #e60000;
+      color: white;
+    }
+
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e60000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+    }
+
+    
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav .logo {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .btn-logout {
+        margin: 10px 0 0;
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 10px;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      nav {
+        padding: 10px 15px;
+      }
+
+      nav ul {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+  <nav>
+    <div class="logo">TASTY THRONE</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button id="logoutBtn" class="btn-logout">Logout</button>
+  </nav>
+
+  
+  <section class="hero">
+    <h1>Delicious Food Delivered To You!</h1>
+    <p>Fresh. Fast. Tasty. Order your meal in just a few clicks.</p>
+    <a href="menu.html" class="btn">Order Now</a>
+  </section>
+
+  
+  <footer id="contact">
+    <p>&copy; 2025 Foodie Express. All rights reserved.</p>
+  </footer>
+
+  <script>
+    
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

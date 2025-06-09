@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TASTY THRONE - Table Booking</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    nav {
+      background-color: #ff4d4d;
+      padding: 20px 50px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .btn-logout {
+      background-color: white;
+      color: #ff4d4d;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-logout:hover {
+      background-color: #e60000;
+      color: white;
+    }
+
+    .booking-container {
+      background-color: #ff4d4d;
+      padding: 40px;
+      border-radius: 10px;
+      width: 400px;
+      color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      margin: 50px auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button[type="submit"] {
+      background-color: #fff;
+      color: #ff4d4d;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #e60000;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <nav>
+    <div class="logo">TASTY THRONE</div>
+    <ul class="nav-links">
+      
+    </ul>
+    <button id="logoutBtn" class="btn-logout">Logout</button>
+  </nav>
+
+  
+  <div class="booking-container">
+    <h2>Book a Table</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <input type="number" id="peopleCount" placeholder="Number of People" min="1" required />
+      <input type="time" id="startTime" min="07:00" max="22:00" required />
+    <input type="time" id="endTime" min="08:00" max="23:00" required />
+      <button type="submit">Book Table</button>
+    </form>
+  </div>
+
+  
+  <footer id="contact">
+    <p>&copy; 2025 Foodie Express. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const peopleCount = document.getElementById('peopleCount').value.trim();
+      const startTime = document.getElementById('startTime').value;
+      const endTime = document.getElementById('endTime').value;
+
+      const tableNumber = Math.floor(Math.random() * 30) + 1;
+      alert("Table Number Allotted: " + tableNumber);
+
+      const user = JSON.parse(localStorage.getItem('loggedInUser')) || { email: 'Not logged in' };
+
+      const bookingInfo = {
+        name,
+        email: user.email,
+        phone,
+        peopleCount,
+        startTime,
+        endTime,
+        tableNumber
+      };
+
+      localStorage.setItem('bookingInfo', JSON.stringify(bookingInfo));
+      window.location.href = 'home.html';
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('loggedInUser');
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>

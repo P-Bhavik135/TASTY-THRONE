@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TASTY THRONE - Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  
+  <nav>
+    <div class="logo">TASTY THRONE</div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  
+
+  
+  <section class="menu-section">
+    <h1>Our Menu</h1>
+    <h2> Appetizers</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Amuse-bouche.jpeg" alt="Amuse-bouche" />
+        <div class="info">
+          <h3>Amuse-bouche</h3>
+          <p>₹99</p>
+          <button onclick="addToCart('Amuse-bouche', 99)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Canapes.jpg" alt="Canapés & Hors d'oeuvres
+" />
+        <div class="info">
+          <h3>Canapés & Hors d'oeuvres
+</h3>
+          <p>₹249</p>
+          <button onclick="addToCart('Canapés & Hors doeuvres',249)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Tartare.jpg" alt="Tartare" />
+        <div class="info">
+          <h3>Tartare</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Tartare', 199)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="Truffle mushroon.jpg" alt="Soups" />
+        <div class="info">
+          <h3>Soups</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Soups', 199)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 5 -->
+      <div class="food-card">
+        <img src="Crostine.jpg" alt="Crostini" />
+        <div class="info">
+          <h3>Crostini</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Crostini', 299)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 6 -->
+      <div class="food-card">
+        <img src="Dumplings.jpg" alt="Dumplings" />
+        <div class="info">
+          <h3>Dumplings</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Dumplings', 299)">Add to Cart</button>
+        </div>  
+    </div>
+
+  </section>
+    <section class="menu-section">
+    
+    <h2>Salads</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Caesar Salad.jpg" alt="Caesar Salad" />
+        <div class="info">
+          <h3>Caesar Salad</h3>
+          <p>₹99</p>
+          <button onclick="addToCart('Caesar Salad', 99)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Burrata Salad.jpg" alt="Burrata Salad" />
+        <div class="info">
+          <h3>Burrata Salad</h3>
+          <p>₹149</p>
+          <button onclick="addToCart('Burrata Salad',149)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Goat Cheese Salad.jpg" alt="Goat Cheese Salad" />
+        <div class="info">
+          <h3>Goat Cheese Salad</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Goat Cheese Salad', 299)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="Waldorf.jpg" alt="Nicoise Salad" />
+        <div class="info">
+          <h3>Nicoise Salad</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Nicoise Salad', 299)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 5 -->
+      <div class="food-card">
+        <img src="Microgreens & Edible Flower Salad s.jpg" alt="Edible Flower Salad" />
+        <div class="info">
+          <h3>Edible Flower Salad</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Edible Flower Salad', 199)">Add to Cart</button>
+        </div>  
+    </div>
+    
+  </section>
+
+  <section class="menu-section">
+    <h2>Seafood Specials</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Lobster Thermidor.jpg" alt="Lobster Thermidor" />
+        <div class="info">
+          <h3>Lobster Thermidor</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Lobster Thermidor', 599)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Grilled Atlantic Salmon.jpg" alt="Grilled Atlantic Salmon" />
+        <div class="info">
+          <h3>Grilled Atlantic Salmon</h3>
+          <p>₹349</p>
+          <button onclick="addToCart('Grilled Atlantic Salmon',749)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Seared Scallops.jpg" alt="Seared Scallops" />
+        <div class="info">
+          <h3>Seared Scallops</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Seared Scallops', 299)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="Caviar.jpg" alt="Caviar with blinis" />
+        <div class="info">
+          <h3>Caviar with blinis</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Caviar with blinis', 199)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 5 -->
+      <div class="food-card">
+        <img src="Oysters Rockefeller.jpg" alt="Oysters Rockefeller" />
+        <div class="info">
+          <h3>Oysters Rockefeller</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Oysters Rockefelle', 299)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 6 -->
+      <div class="food-card">
+        <img src="Crab Cakes.jpg" alt="Crab Cakes" />
+        <div class="info">
+          <h3>Crab Cakes</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Crab Cakes', 299)">Add to Cart</button>
+        </div>  
+    </div>
+  </section>
+  <section class="menu-section">
+    <h2>Meat & Poultry</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Wagyu or Kobe Beef Steak.jpg" alt="Kobe Beef Steak" />
+        <div class="info">
+          <h3>Kobe Beef Steak</h3>
+          <p>₹599</p>
+          <button onclick="addToCart('Kobe Beef Steak', 599)">Add to Cart</button>
+        </div>
+      </div>
+
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Lamb Chops with rosemary jus.jpg" alt="Lamb Chops" />
+        <div class="info">
+          <h3>Lamb Chops</h3>
+          <p>₹449</p>
+          <button onclick="addToCart('Lamb Chops',449)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Duck à l’Orange.jpg" alt="Duck à l’Orange" />
+        <div class="info">
+          <h3>Duck à l’Orange</h3>
+          <p>₹499</p>
+          <button onclick="addToCart('Duck à l’Orange',499)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="Chicken Roulade.jpg" alt="Chicken Roulade" />
+        <div class="info">
+          <h3>Chicken Roulade</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Chicken Roulade', 299)">Add to Cart</button>
+        </div>
+      </div> 
+        <!-- Food Card 5 -->
+      <div class="food-card">
+        <img src="Veal Ossobuco.jpg" alt="Veal Ossobuco" />
+        <div class="info">
+          <h3>Veal Ossobuco</h3>
+          <p>₹399</p>
+          <button onclick="addToCart('Veal Ossobuco', 399)">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Food Card 6 -->
+      <div class="food-card">
+        <img src="Beef Wellington.jpg" alt="Beef Wellington" />
+        <div class="info">
+          <h3>Beef Wellington</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Beef Wellington', 299)">Add to Cart</button>
+        </div>
+      </div>
+
+     
+    </div>
+  </section>
+
+
+  
+
+  <section class="menu-section">
+    <h2>Pasta & Risotto</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Lobster Ravioli.jpg" alt="Lobster Ravioli" />
+        <div class="info">
+          <h3>Lobster Ravioli</h3>
+          <p>₹399</p>
+          <button onclick="addToCart('Lobster Ravioli', 399)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Truffle Mushroom Risotto.jpg" alt="Truffle Mushroom Risotto" />
+        <div class="info">
+          <h3>Truffle Mushroom Risotto</h3>
+          <p>₹249</p>
+          <button onclick="addToCart('Truffle Mushroom Risotto',249)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Fettuccine Alfredo.jpg" alt="Fettuccine Alfredo" />
+        <div class="info">
+          <h3>Fettuccine Alfredo</h3>
+          <p>₹399</p>
+          <button onclick="addToCart('Fettuccine Alfredo', 399)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="Gnocchi with sage butter.jpg" alt="Gnocchi with sage butter" />
+        <div class="info">
+          <h3>Gnocchi with sage butter</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Gnocchi with sage butter', 199)">Add to Cart</button>
+        </div>
+      </div> 
+        <!-- Food Card 5 -->
+      <div class="food-card">
+        <img src="Seafood Linguine.jpg" alt="Seafood Linguine" />
+        <div class="info">
+          <h3>Seafood Linguine</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Seafood Linguine', 299)">Add to Cart</button>
+        </div>  
+     
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <h2>Rice Specialties</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Signature Biryani .jpg" alt="Signature Biryani" />
+        <div class="info">
+          <h3>Signature Biryani</h3>
+          <p>₹249</p>
+          <button onclick="addToCart('Signature Biryani', 249)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Saffron Risotto.jpg" alt="Saffron Risotto" />
+        <div class="info">
+          <h3>Saffron Risotto</h3>
+          <p>₹149</p>
+          <button onclick="addToCart('Saffron Risotto',149)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Truffle Mushroom Risotto.jpg" alt="Truffle Fried Rice" />
+        <div class="info">
+          <h3>Truffle Fried Rice</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Truffle Fried Rice', 199)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="asmine or Basmati with curry.jpg" alt="Basmati with curry" />
+        <div class="info">
+          <h3>Basmati with curry</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Basmati with curry', 199)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 5 -->
+      <div class="food-card">
+        <img src="Sushi Rice Dishes.jpg" alt="Sushi Rice Dishes" />
+        <div class="info">
+          <h3>Sushi Rice Dishes</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Sushi Rice Dishes', 199)">Add to Cart</button>
+        </div>
+      </div>
+  </section>
+
+  <section class="menu-section">
+    <h2>Grilled & Tandoor Items</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Grilled Prawns.jpg" alt="Grilled Prawns" />
+        <div class="info">
+          <h3>Grilled Prawns</h3>
+          <p>₹249</p>
+          <button onclick="addToCart('Grilled Prawns', 249)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Tandoori Chicken.jpg" alt="Tandoori Chicken" />
+        <div class="info">
+          <h3>Tandoori Chicken</h3>
+          <p>₹349</p>
+          <button onclick="addToCart('Tandoori Chicken',349)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Chargrilled Vegetables.jpg" alt="Chargrilled Vegetables" />
+        <div class="info">
+          <h3>Chargrilled Vegetables</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Chargrilled Vegetables', 199)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="Kebabs.jpg" alt="Kebabs" />
+        <div class="info">
+          <h3>Kebabs</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Kebabs', 299)">Add to Cart</button>
+        </div>  
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <h2>Cheese & Charcuterie</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Imported cheese boards.jpg" alt="imported cheese boards" />
+        <div class="info">
+          <h3>imported cheese boards</h3>
+          <p>₹399</p>
+          <button onclick="addToCart('imported cheese boards', 399)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Cured meats.jpg" alt="Cured meats" />
+        <div class="info">
+          <h3>Cured meats</h3>
+          <p>₹349</p>
+          <button onclick="addToCart('Cured meats',349)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="nuts, honeycomb.jpg" alt="figs, nuts, honeycomb" />
+        <div class="info">
+          <h3>figs, nuts, honeycomb</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('figs, nuts, honeycomb', 199)">Add to Cart</button>
+        </div>
+      </div>
+
+      
+  </section>
+
+  <section class="menu-section">
+    <h2>Artisan Breads & Sides</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Olive focaccia.jpg" alt="Olive focaccia" />
+        <div class="info">
+          <h3>Olive focaccia</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Olive focaccia', 199)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Compound butters.jpg" alt="Compound butters" />
+        <div class="info">
+          <h3>Compound butters</h3>
+          <p>₹149</p>
+          <button onclick="addToCart('Compound butters',149)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Seasonal sautéed vegetables.jpg" alt="Seasonal sautéed vegetables" />
+        <div class="info">
+          <h3>Seasonal sautéed vegetables</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Seasonal sautéed vegetables', 199)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="Mashed potato with truffle oi.jpg" alt="Mashed potato with truffle oil" />
+        <div class="info">
+          <h3>Mashed potato with truffle oil</h3>
+          <p>₹299</p>
+          <button onclick="addToCart('Mashed potato with truffle oil', 299)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 5 -->
+      <div class="food-card">
+        <img src="Polenta.jpg" alt="Polenta, couscous" />
+        <div class="info">
+          <h3>Polenta, couscous</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Polenta, couscous', 199)">Add to Cart</button>
+        </div>
+      </div>
+
+  </section>
+
+  <section class="menu-section">
+    <h2>Desserts</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Chocolate Fondant.jpg" alt="Chocolate Fondant" />
+        <div class="info">
+          <h3>Chocolate Fondant</h3>
+          <p>₹249</p>
+          <button onclick="addToCart('Chocolate Fondant', 249)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Crème Brûlée.jpg" alt="Crème Brûlée" />
+        <div class="info">
+          <h3>Crème Brûlée</h3>
+          <p>₹149</p>
+          <button onclick="addToCart('Crème Brûlée',149)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Mille-feuille.jpg" alt="Mille-feuille" />
+        <div class="info">
+          <h3>Mille-feuille</h3>
+          <p>₹99</p>
+          <button onclick="addToCart('Mille-feuille', 99)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="Soufflé.jpg" alt="Soufflé" />
+        <div class="info">
+          <h3>Soufflé</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Soufflé', 199)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 5 -->
+      <div class="food-card">
+        <img src="Assorted Petit Fours & Macarons.jpg" alt="Assorted Petit Fours" />
+        <div class="info">
+          <h3>Assorted Petit Fours</h3>
+          <p>₹99</p>
+          <button onclick="addToCart('Assorted Petit Fours', 99)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 6 -->
+      <div class="food-card">
+        <img src="Gelato.jpg" alt="Gelato" />
+        <div class="info">
+          <h3>Gelato</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Gelato', 199)">Add to Cart</button>
+        </div>  
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <h2>Beverages & Pairings</h2><br><br>
+    <div class="food-grid">
+
+      <!-- Food Card 1 -->
+      <div class="food-card">
+        <img src="Wine pairings.jpg" alt="Wine pairings" />
+        <div class="info">
+          <h3>Wine pairings</h3>
+          <p>₹799</p>
+          <button onclick="addToCart('Wine pairings', 799)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 2 -->
+      <div class="food-card">
+        <img src="Champagne.jpg" alt="Champagne" />
+        <div class="info">
+          <h3>Champagne</h3>
+          <p>₹449</p>
+          <button onclick="addToCart('Champagne',449)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 3 -->
+      <div class="food-card">
+        <img src="Mocktails.jpg" alt="Mocktails" />
+        <div class="info">
+          <h3>Mocktails</h3>
+          <p>₹199</p>
+          <button onclick="addToCart('Mocktails', 199)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Food Card 4 -->
+      <div class="food-card">
+        <img src="Herbal teas, Coffee brews.jpg" alt="Herbal teas, Coffee brews" />
+        <div class="info">
+          <h3>Herbal teas, Coffee brews</h3>
+          <p>₹99</p>
+          <button onclick="addToCart('Herbal teas, Coffee brews', 99)">Add to Cart</button>
+        </div>  
+    </div>
+    <!-- Food Card 5 -->
+      <div class="food-card">
+        <img src="Freshly squeezed juices.jpg.jpg" alt="Freshly squeezed juices" />
+        <div class="info">
+          <h3>Freshly squeezed juices</h3>
+          <p>₹99</p>
+          <button onclick="addToCart('Freshly squeezed juices', 99)">Add to Cart</button>
+        </div>  
+    </div>
+  </section>
+  
+  <footer id="contact">
+    <p>&copy; 2025 Foodie Express. All rights reserved.</p>
+  </footer>
+
+  
+  <script src="script.js"></script>
+  <script>
+    function logout() {
+      
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>

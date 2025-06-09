@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TASTY THRONE - Order Summary</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff8f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    nav {
+      background-color: #ff4d4d;
+      padding: 20px 50px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff4d4d;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .details p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffecec;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #ff4d4d;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fff6f6;
+    }
+
+    .total {
+  margin: 30px auto 0;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+}
+
+    .btn-place-order {
+  padding: 8px 20px;
+  margin: 30px auto 0;
+  background-color: #28a745;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+
+    .btn-place-order:hover {
+      background-color: #218838;
+    }
+
+    .thanks {
+      display: none;
+      text-align: center;
+      color: green;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">TASTY THRONE</div>
+  </nav>
+
+  <div class="container">
+    <h2>Order Summary</h2>
+
+    <div class="section details" id="booking-details">
+      <!-- Booking info will be inserted here -->
+    </div>
+
+    <div class="section">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price (₹)</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+      <div class="total" id="total-price">Total: ₹0.00</div>
+    </div>
+
+    <button class="btn-place-order" onclick="placeOrder()">Order Placed</button>
+    <div class="thanks" id="thank-you">Thank you! Your order has been placed.</div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Foodie Express. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Display booking details
+    const booking = JSON.parse(localStorage.getItem('bookingInfo'));
+    const bookingDiv = document.getElementById('booking-details');
+
+    if (booking) {
+      bookingDiv.innerHTML = `
+        <p><strong>Name:</strong> ${booking.name}</p>
+        <p><strong>Email:</strong> ${booking.email}</p>
+        <p><strong>Phone:</strong> ${booking.phone}</p>
+        <p><strong>No. of People:</strong> ${booking.peopleCount}</p>
+        <p><strong>Time:</strong> ${booking.startTime} - ${booking.endTime}</p>
+        <p><strong>Table Number:</strong> ${booking.tableNumber}</p>
+      `;
+    } else {
+      bookingDiv.innerHTML = `<p style="color:red;">No booking details found.</p>`;
+    }
+
+    // Display cart items
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartTable = document.getElementById('cart-items');
+    const totalDiv = document.getElementById('total-price');
+    let total = 0;
+
+    cart.forEach(item => {
+      total += item.price;
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>${item.name}</td><td>₹${item.price.toFixed(2)}</td>`;
+      cartTable.appendChild(row);
+    });
+
+    totalDiv.textContent = `Total: ₹${total.toFixed(2)}`;
+
+    // Clear data and show thank you message
+    function placeOrder() {
+      localStorage.removeItem('bookingInfo');
+      localStorage.removeItem('cart');
+      document.getElementById('thank-you').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

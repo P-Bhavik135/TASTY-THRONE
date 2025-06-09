@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foodie Express - Payment</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff8f8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #ff4d4d;
+      color: white;
+    }
+
+    nav .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      color: #ffd6d6;
+    }
+
+    .container {
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 90%;
+      margin: auto;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #ff4d4d;
+      color: white;
+    }
+
+    .total {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .pay-confirm-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .pay-confirm-btn:hover {
+      background-color: #218838;
+    }
+
+    .success-message {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #28a745;
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">TASTY THRONE</div>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Review Your Order</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (₹)</th>
+        </tr>
+      </thead>
+      <tbody id="payment-items">
+        
+      </tbody>
+    </table>
+
+    <div class="total" id="payment-total">Total: ₹0.00</div>
+    
+    <button class="pay-confirm-btn" onclick="confirmPayment()">Confirm Payment</button><br><br>
+
+    <div class="success-message" id="success-msg">🎉 Order Placed Successfully!</div><br>
+    <div>click "Confirm Payment" once the payment is done</div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Foodie Express. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const itemsContainer = document.getElementById('payment-items');
+    const totalContainer = document.getElementById('payment-total');
+
+    let total = 0;
+    cart.forEach(item => {
+      total += item.price;
+      itemsContainer.innerHTML += `
+        <tr>
+          <td>${item.name}</td>
+          <td>${item.price.toFixed(2)}</td>
+        </tr>
+      `;
+    });
+
+    totalContainer.innerText = `Total: ₹${total.toFixed(2)}`;
+
+    function confirmPayment() {
+      
+      localStorage.removeItem('cart');
+
+      
+      document.getElementById('success-msg').style.display = 'block';
+
+      
+      const btn = document.querySelector('.pay-confirm-btn');
+      btn.disabled = true;
+      btn.style.backgroundColor = 'gray';
+      btn.innerText = 'Payment Completed';
+
+      
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
