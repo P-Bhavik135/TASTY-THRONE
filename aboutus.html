@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TASTY THRONE - About Us</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f8;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #ff4d4d;
+      color: white;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ffd6d6;
+    }
+
+    .logout-btn {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .logout-btn:hover {
+      background-color: #e60000;
+    }
+
+    .about-section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-section h1 {
+      font-size: 42px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #ff4d4d;
+    }
+
+    .about-subsection {
+      margin-bottom: 40px;
+    }
+
+    .about-subsection h2 {
+      font-size: 28px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .about-subsection p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">TASTY THRONE</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+    </ul>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </nav>
+
+  <section class="about-section">
+    <h1>About Us</h1>
+
+    <div class="about-subsection">
+      <h2>Bhavik</h2>
+      <a href="https://p-bhavik135.github.io/portfolio/">https://p-bhavik135.github.io/portfolio/</a>
+    </div>
+
+    <div class="about-subsection">
+      <h2>Srinadh</h2>
+      <a href="https://srinadh9-hrr.github.io/my-website/">https://srinadh9-hrr.github.io/my-website/</a>
+    </div>
+
+    <div class="about-subsection">
+      <h2>Abhinav</h2>
+      <a href="https://blackvenom333.github.io/myportfolio/">https://blackvenom333.github.io/myportfolio/</a>
+    </div>
+
+    <div class="about-subsection">
+      <h2>Dinesh</h2>
+      <a href="https://dineshvirat18.github.io/portfolio/">https://dineshvirat18.github.io/portfolio/</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Foodie Express. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function logout() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
